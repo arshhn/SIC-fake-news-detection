@@ -1,5 +1,5 @@
 # Fake News Headline Classification
-
+https://sic-fake-news-detection.streamlit.app/
 A small Streamlit demo serving a trained TextCNN that predicts whether a headline matches the `fake` or `real` label in the historical WELFake dataset. It is a university project demonstration, not a fact-checker.
 
 ## Run locally
