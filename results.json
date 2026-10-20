@@ -1,0 +1,114 @@
+{
+  "dataset": "WELFake",
+  "source": "https://huggingface.co/datasets/davanstrien/WELFake",
+  "input": "headline only, capped at 48 tokens",
+  "seed": 42,
+  "rows_after_cleaning": 63633,
+  "label_mapping": {
+    "0": "fake",
+    "1": "real"
+  },
+  "split": {
+    "train": 44541,
+    "validation": 9547,
+    "test": 9545
+  },
+  "cnn": {
+    "architecture": "parallel convolution widths 3, 4, 5; embedding 32; 24 filters each; global max pooling; sigmoid",
+    "epochs": [
+      {
+        "epoch": 1,
+        "train_loss": 0.29943095671764003,
+        "val_loss": 0.24275675831855079,
+        "seconds": 42.2
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.15076339206703332,
+        "val_loss": 0.24881330426657935,
+        "seconds": 41.7
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.07589800140062844,
+        "val_loss": 0.2885223365067749,
+        "seconds": 36.3
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.030492757871343496,
+        "val_loss": 0.3543000014792421,
+        "seconds": 35.5
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.009563433817592346,
+        "val_loss": 0.4239216419282881,
+        "seconds": 35.8
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.0034249958339667734,
+        "val_loss": 0.4713619547004363,
+        "seconds": 35.2
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.0016226085779455805,
+        "val_loss": 0.4924591583518019,
+        "seconds": 35.1
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.0013378149461330678,
+        "val_loss": 0.5191165870336114,
+        "seconds": 35.6
+      }
+    ],
+    "best_val_loss": 0.24275675831855079,
+    "test": {
+      "accuracy": 0.9065479308538502,
+      "precision": 0.8697524219590959,
+      "recall": 0.9336722902703952,
+      "f1": 0.9005795809184128,
+      "roc_auc": 0.9674413947985245,
+      "confusion_matrix": [
+        [
+          4613,
+          605
+        ],
+        [
+          287,
+          4040
+        ]
+      ],
+      "classification_report": {
+        "fake": {
+          "precision": 0.9414285714285714,
+          "recall": 0.8840551935607512,
+          "f1-score": 0.9118402846412335,
+          "support": 5218.0
+        },
+        "real": {
+          "precision": 0.8697524219590959,
+          "recall": 0.9336722902703952,
+          "f1-score": 0.9005795809184128,
+          "support": 4327.0
+        },
+        "accuracy": 0.9065479308538502,
+        "macro avg": {
+          "precision": 0.9055904966938336,
+          "recall": 0.9088637419155732,
+          "f1-score": 0.9062099327798232,
+          "support": 9545.0
+        },
+        "weighted avg": {
+          "precision": 0.9089358842882445,
+          "recall": 0.9065479308538502,
+          "f1-score": 0.9067355109368181,
+          "support": 9545.0
+        }
+      }
+    }
+  }
+}
